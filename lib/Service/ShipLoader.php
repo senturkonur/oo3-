@@ -10,7 +10,7 @@ class ShipLoader
     }
 
     /**
-     * @return Ship[]
+     * @return AbstractShip[]
      */
     public function getShips()
     {
