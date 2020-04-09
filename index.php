@@ -8,6 +8,8 @@ $ships = $shipLoader->getShips();
 
 $rebelShip = new RebelShip('My new rebel ship');
 $ships[] = $rebelShip;
+$brokenShip = new BrokenShip('Just a hunk of metal');
+$ships[] = $brokenShip;
 
 $errorMessage = '';
 if (isset($_GET['error'])) {

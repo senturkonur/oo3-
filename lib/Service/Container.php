@@ -9,6 +9,7 @@ class Container
     private $shipLoader;
 
     private $battleManager;
+    private $shipStorage;
 
     public function __construct(array $configuration)
     {
@@ -55,5 +56,13 @@ class Container
         }
 
         return $this->battleManager;
+    }
+
+    public function getShipStorage()
+    {
+        if ($this->shipStorage === null) {
+            $this->shipStorage = new PdoShipStorage($this->getPDO());
+        }
+        return $this->shipStorage;
     }
 }
